@@ -68,31 +68,10 @@ function promptUser(){
 }
   
 
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//   fs.writeFile(fileName, data, err => {
-//     if (err) {
-//       return console.log(err);
-//     }
-//     console.log("Yay!")
-//   });
-// }
-
-// // TODO: Create a function to initialize app
-// function init() {
-//   prompt(questions).then(answer => {
-//     const response = generateMarkdown(answer);
-//     console.log(answer);
-//     fs.writeFile("README.md", response);
-//   })
-// };
-
 async function init() {
   try {
-      // Ask user questions and generate responses
       const answers = await promptUser();
-      const generateContent = generateMarkdown(answers);
-      // Write new README.md to dist directory
+      const generateContent = generateMarkdown('./README.md',answers);
       await writeFileAsync(generateContent);
       console.log('✔️  Successfully wrote to README.md');
   }   catch(err) {
