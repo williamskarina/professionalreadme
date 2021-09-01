@@ -73,7 +73,7 @@ async function init() {
       const answers = await promptUser();
       const generateContent = generateMarkdown('./README.md',answers);
       await writeFileAsync(generateContent);
-      console.log('✔️  Successfully wrote to README.md');
+      console.log('README.md generated!');
   }   catch(err) {
       console.log(err);
   }
