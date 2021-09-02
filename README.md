@@ -28,7 +28,7 @@ NA
 ## Questions
 email Karina<br />
 <br />
-:octocat: Find me on GitHub: [karinawilliams](https://github.com/karinawilliams)<br />
+:octocat: Find me on GitHub: [karinawilliams](https://github.com/williamskarina)<br />
 <br />
 Email me with any questions: coleman_karina@yahoo.com<br /><br />
 
