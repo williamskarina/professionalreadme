@@ -15,7 +15,7 @@ function promptUser(){
   return inquirer.prompt([
     {
       type: 'input',
-      name: 'projecTitle',
+      name: 'projectTitle',
       message: 'What is the title of your project?',
     },
     {
@@ -46,7 +46,7 @@ function promptUser(){
     },
     {
         type: "input",
-        name: "Tests",
+        name: "tests",
         message: "Test Instructions"
     },
     {
@@ -71,8 +71,8 @@ function promptUser(){
 async function init() {
   try {
       const answers = await promptUser();
-      const generateContent = generateMarkdown('./README.md',answers);
-      await writeFileAsync(generateContent);
+      const generateContent = generateMarkdown(answers);
+      await writeFileAsync('readme.md', generateContent);
       console.log('README.md generated!');
   }   catch(err) {
       console.log(err);
